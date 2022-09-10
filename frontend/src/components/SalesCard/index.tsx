@@ -1,4 +1,3 @@
-
 import axios from "axios";
 import { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
@@ -15,11 +14,11 @@ function SalesCard() {
   const [maxDate, setMaxDate] = useState(max)
   //Retorna os dados do banco de dados faz a requisição
   useEffect(() =>{
-   axios.get("http://localhost:8080/sales")
-          .then(response => {
-            console.log(response.data)
-          })
-  },[] );
+    axios.get("http://localhost:8080/sales")
+    .then(response =>{
+      console.log(response.data)
+    })
+}, []);
 
   return (
     <div className="dsmeta-card">
